@@ -48,7 +48,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -8082,9 +8083,17 @@
     "name": "solc",
     "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xbD50f303160B1F6e14676FB9498AB7EB948D30A6",
+      "transactionHash": "0x74b83960be21a8738d50a147c6e713a72804676ae27775e7fef0d110e1a33e06"
+    }
+  },
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-04-29T16:26:46.548Z",
+  "updatedAt": "2021-04-29T16:36:04.439Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "Thanh-Quy Nguyen",
     "details": "Contract dedicated to the creation of new zombies as an extension of CryptoKitties",
