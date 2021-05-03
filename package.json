@@ -4,10 +4,7 @@
 	"description": "Cryptozombies using Truffle",
 	"main": "index.js",
 	"scripts": {
-		"test": "truffle test",
-		"docker:test": "docker-compose -p ZombieFactory-test -f docker-compose.tests.yml up",
-		"migrate": "truffle migrate --network ropsten",
-		"docker:migrate": "docker-compose -p ZombieFactory -f docker-compose.migrate.yml up"
+		"test": "truffle test"
 	},
 	"repository": {
 		"type": "git",
