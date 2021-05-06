@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"@openzeppelin/test-helpers": "^0.5.10",
 		"chai": "^4.3.4",
+		"eslint": "^7.25.0",
 		"prettier": "2.2.1",
 		"solidity-coverage": "^0.7.16"
 	},

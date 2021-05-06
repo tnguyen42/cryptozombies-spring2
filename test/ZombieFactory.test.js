@@ -1,3 +1,5 @@
+const { expect } = require("chai");
+
 require("chai").should();
 
 const ZombieFactory = artifacts.require("ZombieFactory");
