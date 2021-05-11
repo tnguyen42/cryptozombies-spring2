@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  ganache:
+    container_name: ganache
+    image: trufflesuite/ganache-cli:v6.12.2
+    networks:
+      - ethereum
+    ports:
+      - "8545:8545"
+    logging:
+      driver: none
+
+  test:
+    container_name: test
+    build:
+      context: ./
+      dockerfile: tests.Dockerfile
+    networks:
+      - ethereum
+    depends_on:
+      - ganache
+    volumes:
+      - ".:/usr/src/app"
+    environment:
+      - host=ganache
+
+networks:
+  ethereum:

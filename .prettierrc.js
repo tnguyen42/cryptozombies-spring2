@@ -10,4 +10,7 @@ module.exports = {
 	proseWrap: "never",
 	htmlWhitespaceSensitivity: "strict",
 	endOfLine: "lf",
+	[yaml]: {
+		useTabs: false
+	},
 };
