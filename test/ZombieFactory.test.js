@@ -1,5 +1,3 @@
-const { expect } = require("chai");
-
 require("chai").should();
 
 const ZombieFactory = artifacts.require("ZombieFactory");
@@ -11,7 +9,7 @@ contract("ZombieFactory", function ([admin, registeredUser, unregistered]) {
 
 	describe("Creating Zombie", () => {
 		it("should create a new zombie from a name", async () => {
-			this.ZombieFactory.createRandomZombie("Michel");
+			await this.ZombieFactory.createRandomZombie("Michel");
 
 			firstZombie = await this.ZombieFactory.zombies.call([0]);
 			firstZombie.name.should.equal("Michel");

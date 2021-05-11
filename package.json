@@ -20,13 +20,18 @@
 	},
 	"homepage": "https://github.com/tnguyen42/cryptozombies-spring2#readme",
 	"devDependencies": {
+		"@babel/core": "^7.14.0",
+		"@babel/eslint-parser": "^7.13.14",
 		"@openzeppelin/test-helpers": "^0.5.10",
 		"chai": "^4.3.4",
-		"eslint": "^7.25.0",
+		"eslint": "^7.26.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
 		"prettier": "2.2.1",
 		"solidity-coverage": "^0.7.16"
 	},
 	"dependencies": {
+		"@openzeppelin/contracts": "^4.1.0",
 		"@truffle/hdwallet-provider": "^1.2.3",
 		"dotenv": "^8.2.0",
 		"solc": "^0.8.4",
