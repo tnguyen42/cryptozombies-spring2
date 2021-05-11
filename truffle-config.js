@@ -62,7 +62,7 @@ module.exports = {
 					"https://ropsten.infura.io/v3/" + ropsten_infura_apikey
 				),
 			network_id: "3",
-			gas: 8000000,
+			gas: 7092189,
 		},
 		mainnet: {
 			provider: () =>

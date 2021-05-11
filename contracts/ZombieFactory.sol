@@ -32,7 +32,7 @@ contract ZombieFactory is Ownable {
 	 * @param _dna The DNA of the zombie to be created
 	 */
 	function _createZombie(string memory _name, uint256 _dna) internal {
-		zombies.push(Zombie(_name, _dna));
+		zombies.push(Zombie(_name, _dna, 0, 0));
 
 		uint256 id = zombies.length - 1;
 		zombieToOwner[id] = msg.sender;
