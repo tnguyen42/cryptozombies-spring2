@@ -7,7 +7,8 @@
 		"test": "truffle test",
 		"migrate": "truffle migrate --network ropsten",
 		"docker:migrate": "docker-compose -p cz-migrate -f docker-compose.migrate.yaml up",
-		"docker:test": "docker-compose -p cz-tests -f docker-compose.tests.yaml up"
+		"docker:test": "docker-compose -p cz-tests -f docker-compose.tests.yaml up",
+		"docs": "npx solidity-docgen --solc-module solc-0.7"
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +29,7 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^3.4.0",
 		"prettier": "2.2.1",
+		"solc-0.7": "npm:solc@^0.8.4",
 		"solidity-coverage": "^0.7.16"
 	},
 	"dependencies": {
