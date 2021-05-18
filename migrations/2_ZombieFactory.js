@@ -1,12 +1,12 @@
-const ZombieFactory = artifacts.require("ZombieFactory.sol");
+const ZombieHelper = artifacts.require("ZombieHelper.sol");
 
 module.exports = function (deployer, network) {
 	return deployer
 		.then(() => {
-			console.log("Starting deploying ZombieFactory on " + network);
-			return deployer.deploy(ZombieFactory);
+			console.log("Starting deploying ZombieHelper on " + network);
+			return deployer.deploy(ZombieHelper);
 		})
 		.then(() => {
-			console.log("ZombieFactory successfully deployed");
+			console.log("ZombieHelper successfully deployed");
 		});
 };

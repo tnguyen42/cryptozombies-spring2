@@ -9,8 +9,5 @@ module.exports = {
 	arrowParens: "always",
 	proseWrap: "never",
 	htmlWhitespaceSensitivity: "strict",
-	endOfLine: "lf",
-	[yaml]: {
-		useTabs: false
-	},
+	endOfLine: "lf"
 };
