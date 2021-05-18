@@ -1,20 +1,25 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 /**
  * @title ZombieFactory
  * @author Thanh-Quy Nguyen
  * @dev Contract dedicated to the creation of new zombies as an extension of CryptoKitties
  */
-contract ZombieFactory {
+contract ZombieFactory is Ownable {
 	event NewZombie(uint256 zombieId, string name, uint256 dna);
 
 	uint256 dnaDigits = 16;
 	uint256 dnaModulus = 10**dnaDigits;
+	uint256 cooldownTime = 1 days;
 
 	struct Zombie {
 		string name;
 		uint256 dna;
+		uint32 level;
+		uint32 readyTime;
 	}
 
 	Zombie[] public zombies;
@@ -28,7 +33,9 @@ contract ZombieFactory {
 	 * @param _dna The DNA of the zombie to be created
 	 */
 	function _createZombie(string memory _name, uint256 _dna) internal {
-		zombies.push(Zombie(_name, _dna));
+		zombies.push(
+			Zombie(_name, _dna, 1, uint32(block.timestamp + cooldownTime))
+		);
 
 		uint256 id = zombies.length - 1;
 		zombieToOwner[id] = msg.sender;
